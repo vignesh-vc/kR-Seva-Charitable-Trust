@@ -1,0 +1,709 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* #99412E */
+
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+
+}
+
+
+
+/* Side Navbar */
+.side-navbar{
+    position: fixed;
+    top: 0;
+    right: -60%;
+    width: 50%;
+    height: 100%;
+    background-color: black;
+    color: #E2E1E1;
+    margin-left: -60%;
+    transition-duration: 1s;
+    z-index: 10;
+    padding: 20px;
+  
+}
+
+.side-navbar-link{
+    margin-bottom: 30px;
+}
+
+.side-navbar-links a{
+    text-decoration: none;
+    color: #E2E1E1;
+}
+
+.side-navbar-links a:hover{
+    text-decoration: underline;
+    color: #E2E1E1;
+}
+
+.side-navbar-search {
+    border: solid #E2E1E1 1px;
+    border-radius: 10px;
+    padding: 10px;
+    display: inline-block;
+}
+
+.side-navbar-search input {
+    border: none;
+    background: transparent;
+}
+
+
+
+/*Home*/
+
+.home {
+    background-color: rgba(0, 0, 0, 0.5);
+
+    background-image: url(./images/homeBg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* Ensures the background image covers the entire section */
+    background-position: center;
+    /* Centers the background image */
+
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Full viewport height */
+    padding: 20px;
+    /* Adds some padding for smaller screens */
+    color: white;
+    /* Ensure text is visible against the background */
+    animation: slideshow 20s infinite;
+}
+
+@keyframes slideshow {
+    0% {
+        background-image: url('./images/homeBg.jpg');
+    }
+
+    25% {
+        background-image: url('./images/image5.jpg');
+    }
+
+    50% {
+        background-image: url('./images/image2.jpg');
+    }
+
+    75% {
+        background-image: url('./images/image3.jpg');
+    }
+
+    100% {
+        background-image: url('./images/image4.jpg');
+        /* Loop back to the first image */
+    }
+}
+
+.home_sec {
+    background-color: rgba(0, 0, 0, 0.6);
+    /* Solid black background */
+
+    width: 100vw;
+    /* Full width of the viewport */
+    height: 100vh;
+    /* Full height of the viewport */
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: -20px;
+    margin-bottom: -20px;
+    display: flex;
+    justify-content: center;
+    /* Center content horizontally */
+    align-items: center;
+    /* Center content vertically */
+
+    color: white;
+    /* White text for contrast */
+    text-align: center;
+    /* Center the text inside */
+}
+
+.home_sec1-head {
+    color: white;
+    font-size: 46px;
+    z-index: 10;
+    font-weight: 600;
+    display: flex;
+    /* position: relative;
+    top: 400px;
+    left: 100px; */
+}
+
+.home_sec2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+}
+
+.home_sec1 {
+    position: absolute;
+    top: 250px;
+    left: 100px;
+}
+
+.home_sec2 {
+    position: absolute;
+    bottom: 150px;
+    left: 100px;
+
+}
+
+.home_sec2_two {
+    display: flex;
+    gap: 5px;
+    color: white;
+    font-weight: 900;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px;
+    position: relative;
+    top: 5px;
+
+}
+
+.home_sec2_two:hover {
+    color: black;
+    transition: 1s;
+}
+
+.home_sec2_one {
+    font-weight: 600;
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+    background-color: orangered;
+    border-radius: 5%;
+}
+
+.home_sec2_one:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.home_sec_line {
+    position: relative;
+    bottom: -260px;
+
+}
+
+/*About-sec*/
+.about-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 20px;
+
+}
+
+.about-content {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+}
+
+.about-img {
+    width: 300px;
+    height: 200px;
+}
+
+.about-img img {
+    width: 300px;
+    height: 400px;
+}
+
+.about-content_head {
+    font-weight: 900;
+    font-size: 15px;
+}
+
+.about-content_subhead {
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.about-btn {
+    background-color: #99412E;
+    color: white;
+    padding: 5px;
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.about-btn:hover {
+    background-color: black;
+    color: white;
+    transition: 2s;
+}
+
+/*Service-sec*/
+.service-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 100px;
+    background-color: #FCE9CD;
+    padding-bottom: 20px;
+
+}
+
+.service-img {
+    width: 300px;
+    height: 400px;
+    float: right;
+    position: relative;
+    top: 80px;
+    right: 0px;
+}
+
+.service-img img {
+    border-radius: 5%;
+}
+
+.service-content {
+    width: 500px;
+
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    gap: 10px;
+}
+
+.service-content_subhead1 {
+    padding-top: 10px;
+    font-size: 25px;
+    font-weight: 900;
+}
+
+.service-content-h4 {
+
+    font-size: 15px;
+    font-weight: 900;
+}
+
+.service-item {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    padding-left: 10px;
+}
+
+.service-items {
+    display: flex;
+    flex-direction: column;
+    padding-right: 100px;
+    gap: 10px;
+}
+
+.service-content-1 {
+    padding-right: 5px;
+}
+
+.service-content_subhead {
+    font-size: 15px;
+    font-weight: 900;
+}
+
+/*project*/
+.project-section {
+    margin-top: 100px;
+}
+
+.projects-content-head {
+    font-size: 15px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.projects-content-para {
+    font-size: 25px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.projects-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-left: 150px;
+}
+
+.project-card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+/*Donation*/
+.donation-ratio-container {
+    background-color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.donation-content {
+    color: white;
+    gap: 30px;
+    width: 550px;
+    text-align: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    flex-direction: column;
+}
+
+.donation-content-head {
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.donation-content-para {
+    padding-left: 5px;
+}
+
+.legend {
+    display: flex;
+    padding-left: 2px;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.piechart-img img {
+    width: 400px;
+    height: 400px;
+}
+
+/*contribution*/
+.contribute-section {
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+
+}
+
+.contribute {
+    background-image: url(../Assets/contribute\ img.jpg);
+    width: 100vw;
+    height: 300px;
+    border-radius: 30px;
+    padding: 30px;
+}
+
+.contribute-bg {
+    background-color: rgba(0, 0, 0, 0.5);
+    height: 300px;
+    border-radius: 30px;
+}
+
+.contribute-content {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 50%;
+    font-weight: 900;
+
+    font-size: 25px;
+}
+
+.contribute-content2 {
+    display: flex;
+    flex-direction: row;
+
+}
+
+.contribute-content button {
+    padding: 10px 30px 10px 30px;
+    margin: 20px;
+    font-family: inherit;
+    border: none;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+#contribute-btn1 {
+    background-color: rgb(236, 110, 0);
+    cursor: pointer;
+}
+
+#contribute-btn1:hover{
+    background-color: black;
+    color: white;
+    transition: 2s;
+} 
+#contribute-btn2:hover{
+    background-color: black;
+    color: white;
+    transition: 2s;
+} 
+
+#contribute-btn2 {
+    background-color: rgb(101, 5, 5);
+    cursor: pointer;
+}
+/*donate*/
+.donate-img{
+    width: 400px;
+    height: 500px;
+    position: relative;
+    top: 100px;
+    
+}
+#donate{
+    background-color: #FCE9CD;
+}
+
+/*events*/
+.event-section{
+    padding-bottom: 20px;
+}
+.event-content-subhead{
+    font-size: 15px;
+    font-weight: 900;
+    padding-left: 20px;
+    padding-top: 5px;
+    margin-top: 20px;
+}
+
+.next-events-content1,.next-events-content2{
+font-size: 18px;
+
+font-weight: 900;
+    width: 600px;
+    height: 120px;
+    background-color: #FCE9CD;
+    color: black;
+    border-radius: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding-top: 10px;
+    padding: 10px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+.next-events{
+padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+   
+    justify-content: space-around;
+    
+}
+@media screen and (max-width:480px) {
+    .header-logo2 {
+        display: none;
+    }
+
+    .home_sec1-head {
+        position: relative;
+        top: 10px;
+        left: -50px;
+        font-size: 22px;
+        text-align: center;
+    }
+
+    .home_sec2 {
+        position: relative;
+        top: 150px;
+        left: 10px;
+
+    }
+
+    .home_sec2_one {
+        font-weight: 600;
+        font-size: 15px;
+        color: white;
+        cursor: pointer;
+        padding: 10px;
+        background-color: orangered;
+        border-radius: 5%;
+        position: relative;
+        top: -20px;
+    }
+
+    .home_sec2_two {
+        display: flex;
+        gap: 5px;
+        color: white;
+        font-weight: 300;
+        font-size: 20px;
+        cursor: pointer;
+        padding: 10px;
+        position: relative;
+        top: -20px;
+
+    }
+
+    .home {
+        background-size: auto 100%;
+        /* Adjusts the background image for mobile */
+        padding: 5px;
+        text-align: center;
+        /* Center text for better readability on small screens */
+    }
+
+    .home_sec_line {
+        font-size: 8px;
+        display: none;
+    }
+
+    /*About-sec*/
+    .about-content {
+        width: 100vw;
+        font-size: 15px;
+    }
+
+    /*Service-sec*/
+    .service-section {
+        margin-top: 200px;
+        width: 100vw;
+        padding-bottom: 100px;
+    }
+
+    .service-content {
+        padding-left: 10px;
+    }
+
+    .service-content-h4 {
+        text-align: left;
+    }
+
+    .service-content-1 {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    /*project*/
+    .projects-content {
+        padding-left: 10px;
+    }
+
+    /*contribute*/
+
+    .contribute-content {
+        padding: 15px;
+        font-size: 15px;
+        font-weight: 900;
+        text-align: center;
+        position: relative;
+        top: 40px;
+    }
+
+    .contribute-content2 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    /*event*/
+    .next-events-content1,.next-events-content2{
+    font-size: 12px;
+    font-weight: 900;
+    }
+}
+
+@media screen and (min-width: 800px) {
+    .home {
+        background-size: auto 100%;
+        /* Adjust background size for smaller screens */
+        padding: 10px;
+        height: auto;
+        /* Allows the height to adjust based on content */
+    }
+
+    .home_sec1-head {
+        text-align: left;
+        padding-bottom: -20px;
+    }
+}
+
+@media screen and (min-width:480px) and (max-width:800px) {
+    .home_sec1-head {
+        font-size: 25px;
+        text-align: left;
+        position: relative;
+        top: 200px;
+    }
+
+    .home_sec_line {
+        font-size: 18px;
+        position: relative;
+        top: 270px;
+    }
+
+    /*Service-sec*/
+    .service-section {
+        margin-top: 200px;
+    }
+
+    .service-content {
+        width: 400px;
+    }
+
+    .service-img {
+        position: relative;
+        top: 100px;
+    }
+
+    /*project*/
+    .projects-content {
+        padding-left: 50px;
+    }
+    /*contribution*/
+    .contribute-content {
+        padding: 15px;
+        font-size: 25px;
+        font-weight: 900;
+        text-align: center;
+        position: relative;
+        top: 40px;
+    }
+    /*donate*/
+    .donate-img{
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: 30px;
+    }
+}
